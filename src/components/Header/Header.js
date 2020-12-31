@@ -1,12 +1,11 @@
 import React from 'react';
-import { HeaderContainer } from '../../AppStyles';
-
+import { HeaderWrapper } from './SCHeader'
 
 const Header = () => {
     return (
-        <HeaderContainer>
+        <HeaderWrapper>
             <h1>Header</h1>
-        </HeaderContainer>
+        </HeaderWrapper>
     );
 };
 

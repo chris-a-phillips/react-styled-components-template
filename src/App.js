@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { FooterContainer, HeaderContainer, MainContainer, NavContainer, PageWrapper } from './AppStyles';
+import { FooterContainer, HeaderContainer, MainContainer, PageWrapper } from './AppStyles';
 import Landing from './pages/Landing/Landing'
 import Home from './pages/Home/Home'
 import './App.css';
@@ -9,15 +9,22 @@ import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
 
 function App() {
-  const [primaryColor, setPrimaryColor] = useState()
-  const [secondaryColor, setSecondaryColor] = useState()
-  const [tertiaryColor, setTertiaryColor] = useState()
+	const [primaryColor, setPrimaryColor] = useState('')
+	const [secondaryColor, setSecondaryColor] = useState('')
+	const [tertiaryColor, setTertiaryColor] = useState('')
+	const [mainTextColor, setMainTextColor] = useState('')
+	const [subTextColor, setSubTextColor] = useState('')
 
-  return (
-		<PageWrapper>
+	const [test, setTest] = useState()
+
+	return (
+		<PageWrapper
+			primaryColor={primaryColor}
+			mainTextColor={mainTextColor}
+			subTextColor={subTextColor}>
 			<HeaderContainer>
-				<Header />
-				<NavBar />
+				<Header secondaryColor={secondaryColor} />
+				<NavBar tertiaryColor={tertiaryColor} />
 			</HeaderContainer>
 			<MainContainer>
 				main
@@ -27,22 +34,16 @@ function App() {
 						<Route
 							path='/home'
 							exact
-							render={() => (
-								<Home
-									primaryColor={primaryColor}
-									secondaryColor={secondaryColor}
-									tertiaryColor={tertiaryColor}
-								/>
-							)}
+							render={() => <Home test={test} />}
 						/>
 					</Switch>
 				</Router>
 			</MainContainer>
 			<FooterContainer>
-        <Footer />
-      </FooterContainer>
+				<Footer />
+			</FooterContainer>
 		</PageWrapper>
-  );
+	);
 }
 
 export default App;

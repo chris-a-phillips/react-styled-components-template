@@ -1,11 +1,11 @@
 import React from 'react';
-import { NavContainer } from './SCNavBar';
+import { NavWrapper } from './SCNavBar';
 
 const NavBar = () => {
     return (
-        <NavContainer>
+        <NavWrapper>
             <h1>NavBar</h1>
-        </NavContainer>
+        </NavWrapper>
     );
 };
 

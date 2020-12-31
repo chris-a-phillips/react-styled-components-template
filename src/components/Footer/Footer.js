@@ -1,10 +1,11 @@
 import React from 'react';
+import { FooterWrapper } from './SCFooter';
 
 const Footer = () => {
     return (
-        <div>
+        <FooterWrapper>
             <h1>Footer</h1>
-        </div>
+        </FooterWrapper>
     );
 };
 
