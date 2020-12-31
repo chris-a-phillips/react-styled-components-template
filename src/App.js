@@ -13,10 +13,8 @@ function App() {
 
 	return (
 		<PageWrapper>
-			<HeaderContainer>
 				<Header />
 				<NavBar />
-			</HeaderContainer>
 			<MainContainer>
 				main
 				<Router>
@@ -30,9 +28,7 @@ function App() {
 					</Switch>
 				</Router>
 			</MainContainer>
-			<FooterContainer>
 				<Footer />
-			</FooterContainer>
 		</PageWrapper>
 	);
 }
