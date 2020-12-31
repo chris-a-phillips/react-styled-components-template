@@ -1,12 +1,11 @@
 import { React, useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { FooterContainer, HeaderContainer, MainContainer, PageWrapper } from './AppStyles';
+import { MainContainer, PageWrapper } from './AppStyles';
 import Landing from './pages/Landing/Landing'
 import Home from './pages/Home/Home'
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import NavBar from './components/NavBar/NavBar';
 
 function App() {
 	const [test, setTest] = useState()
@@ -14,7 +13,6 @@ function App() {
 	return (
 		<PageWrapper>
 				<Header />
-				<NavBar />
 			<MainContainer>
 				main
 				<Router>

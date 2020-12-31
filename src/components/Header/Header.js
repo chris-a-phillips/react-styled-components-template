@@ -1,13 +1,16 @@
 import React from 'react';
-import { HeaderWrapper } from './SCHeader'
+import { HeaderWrapper, NavBar } from './SCHeader'
 
-const Header = ({ secondaryColor }) => {
+const Header = () => {
 
     return (
-        <HeaderWrapper>
-            <h1>Header</h1>
-        </HeaderWrapper>
-    );
+		<HeaderWrapper>
+			<h1>Header</h1>
+			<NavBar>
+				<h1>NavBar</h1>
+			</NavBar>
+		</HeaderWrapper>
+	);
 };
 
 export default Header;
