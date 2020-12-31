@@ -6,8 +6,7 @@ export const PageWrapper = styled.div`
 	height: fill-available;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	background-color: ${({ primaryColor }) =>
-		primaryColor ? primaryColor : '#e9c46a'};
+	background-color: #e9c46a;
 `;
 
 export const HeaderContainer = styled.header``;

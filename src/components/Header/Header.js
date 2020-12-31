@@ -1,7 +1,8 @@
 import React from 'react';
 import { HeaderWrapper } from './SCHeader'
 
-const Header = () => {
+const Header = ({ secondaryColor }) => {
+
     return (
         <HeaderWrapper>
             <h1>Header</h1>

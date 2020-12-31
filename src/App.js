@@ -9,22 +9,13 @@ import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
 
 function App() {
-	const [primaryColor, setPrimaryColor] = useState('')
-	const [secondaryColor, setSecondaryColor] = useState('')
-	const [tertiaryColor, setTertiaryColor] = useState('')
-	const [mainTextColor, setMainTextColor] = useState('')
-	const [subTextColor, setSubTextColor] = useState('')
-
 	const [test, setTest] = useState()
 
 	return (
-		<PageWrapper
-			primaryColor={primaryColor}
-			mainTextColor={mainTextColor}
-			subTextColor={subTextColor}>
+		<PageWrapper>
 			<HeaderContainer>
-				<Header secondaryColor={secondaryColor} />
-				<NavBar tertiaryColor={tertiaryColor} />
+				<Header />
+				<NavBar />
 			</HeaderContainer>
 			<MainContainer>
 				main
