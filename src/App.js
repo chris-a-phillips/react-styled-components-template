@@ -1,24 +1,47 @@
-import logo from './logo.svg';
+import { React, useState } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { FooterContainer, HeaderContainer, MainContainer, NavContainer, PageWrapper } from './AppStyles';
+import Landing from './pages/Landing/Landing'
+import Home from './pages/Home/Home'
 import './App.css';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
+  const [primaryColor, setPrimaryColor] = useState()
+  const [secondaryColor, setSecondaryColor] = useState()
+  const [tertiaryColor, setTertiaryColor] = useState()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+		<PageWrapper>
+			<HeaderContainer>
+				<Header />
+				<NavBar />
+			</HeaderContainer>
+			<MainContainer>
+				main
+				<Router>
+					<Switch>
+						<Route path='/' exact component={Landing} />
+						<Route
+							path='/home'
+							exact
+							render={() => (
+								<Home
+									primaryColor={primaryColor}
+									secondaryColor={secondaryColor}
+									tertiaryColor={tertiaryColor}
+								/>
+							)}
+						/>
+					</Switch>
+				</Router>
+			</MainContainer>
+			<FooterContainer>
+        <Footer />
+      </FooterContainer>
+		</PageWrapper>
   );
 }
 
