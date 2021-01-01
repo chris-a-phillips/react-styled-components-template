@@ -8,7 +8,7 @@ import Home from './pages/Home/Home';
 import Profile from './pages/Profile/Profile';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import { UserContext } from './components/UserContext';
+import { UserContext } from './utils/UserContext';
 import './App.css';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 		<PageWrapper>
 			<Router>
 				<UserContext.Provider value={value}>
-					<Header />
+					<Header value={value}/>
 					<MainContainer>
 						main
 						<Switch>

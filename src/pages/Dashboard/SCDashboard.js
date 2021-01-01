@@ -8,7 +8,7 @@ export const DashboardWrapper = styled.div`
 
 export const LeftSideBar = styled.div`
     background-color: lightblue;
-    `
+`
 
 export const MainContent = styled.div`
     background-color: pink;

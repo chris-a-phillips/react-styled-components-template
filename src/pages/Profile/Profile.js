@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../../components/UserContext';
+import { UserContext } from '../../utils/UserContext';
 
 const Profile = () => {
     const { user } = useContext(UserContext);
@@ -7,7 +7,6 @@ const Profile = () => {
     return (
         <div>
             <h1>Profile</h1>
-            {user}
         </div>
     );
 };

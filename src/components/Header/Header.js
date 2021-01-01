@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../utils/UserContext';
 import { HeaderWrapper, HomeLink, NavBar, NavLink } from './SCHeader'
 
 const Header = () => {
+	const { user } = useContext(UserContext);
+	console.log(user)
 
     return (
 		<HeaderWrapper>
