@@ -33,6 +33,7 @@ const Login = () => {
             [event.target.name]: event.target.value,
         });
     };
+    // console.log(credentials)
 
     const handleClick = () => {
         setNewUser(!newUser);
