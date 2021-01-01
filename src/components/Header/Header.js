@@ -1,13 +1,16 @@
 import React from 'react';
-import { HeaderWrapper, NavBar } from './SCHeader'
+import { HeaderWrapper, HomeLink, NavBar, NavLink } from './SCHeader'
 
 const Header = () => {
 
     return (
 		<HeaderWrapper>
-			<h1>Header</h1>
+            <h1>Header</h1>
+			<HomeLink to='/home'>Home</HomeLink>
 			<NavBar>
 				<h1>NavBar</h1>
+                <NavLink to='/dashboard'>Dashboard</NavLink>
+                <NavLink to='/login'>Login</NavLink>
 			</NavBar>
 		</HeaderWrapper>
 	);
