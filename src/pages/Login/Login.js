@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from '../../utils/UserContext'
-import { login } from '../../utils/UserLogic'
+// import { login } from '../../utils/UserLogic'
 import { Redirect } from 'react-router-dom';
 import axios from 'axios'
 import {
@@ -18,13 +18,12 @@ const Login = () => {
     const [redirect, setRedirect] = useState(false);
     const [newUser, setNewUser] = useState(false)
     const [error, setError] = useState('');
-    const [token, setToken] = useState(null)
     const [credentials, setCredentials] = useState({
-        name: '',
-        email: '',
-        password: '',
-        re_password: '',
-    });
+		name: '',
+		email: '',
+		password: '',
+		re_password: '',
+	});
 
     const handleChange = (event) => {
         event.preventDefault();
@@ -33,17 +32,15 @@ const Login = () => {
             [event.target.name]: event.target.value,
         });
     };
-    // console.log(credentials)
 
     const handleClick = () => {
-        setNewUser(!newUser);
-        setError('');
+		setNewUser(!newUser);
     };
-
-    const signUpURL = 'http://localhost:8000/users/';
-    const signInURL = 'http://localhost:8000/token/login/';
-
+	
     const handleSubmit = (event) => {
+		const signUpURL = 'http://localhost:8000/users/';
+		const signInURL = 'http://localhost:8000/token/login/';
+
         if (!newUser) {
             event.preventDefault();
             axios({
@@ -53,16 +50,18 @@ const Login = () => {
             })
                 .then((res) => {
                     if (res.data.auth_token) {
-                        setToken(res.data.auth_token);
-                        setUser(credentials.email);
+                        setUser({
+							email: credentials.email,
+							token: res.data.auth_token,
+						});
                         setRedirect(true);
                     } else {
                         setError(res.data);
                         throw new Error('There was an error signing in');
                     }
                     return res;
-                })
-                .catch(setError('There was an error signing in'));
+				})
+				.catch(setError('There was an error signing in'));
         } else if (newUser) {
             event.preventDefault();
             axios({
@@ -85,13 +84,14 @@ const Login = () => {
     return (
 		<div>
 			<h1>Login</h1>
-			<button
+			{/* for test login logic */}
+			{/* <button
 				onClick={async () => {
 					const user = await login();
 					setUser(user);
 				}}>
-				change
-			</button>
+				Test Login
+			</button> */}
 			<LoginPage>
 				{!newUser ? (
 					<LoginForm onSubmit={handleSubmit}>
@@ -156,7 +156,8 @@ const Login = () => {
 						{error}
 					</LoginForm>
 				)}
-                <button onClick={() => setRedirect(true)}>test redirect</button>
+				{/* test for redirect */}
+                {/* <button onClick={() => setRedirect(true)}>test redirect</button> */}
 			</LoginPage>
 		</div>
 	);
