@@ -10,5 +10,5 @@ export const PageWrapper = styled.div`
 export const HeaderContainer = styled.header``;
 
 export const MainContainer = styled.main`
-
+	background-color: silver;
 `;

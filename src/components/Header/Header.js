@@ -6,22 +6,30 @@ import {
 	HomeLink,
 	NavBar,
 	NavLink,
+	UserButton,
+	UserContainer,
+	UserInfo
 } from './SCHeader';
 import axios from 'axios';
 
 const Header = () => {
 	const { user, setUser } = useContext(UserContext);
+
 	const logout = () => {
 		setUser(null);
-		const logoutURL = 'http://localhost:8000/token/logout/';
+		
+		// user condition is for testing purposes
+		if (user.username !== 'spongebob') {
+			const logoutURL = 'http://localhost:8000/token/logout/';
 
-		axios({
-			method: 'post',
-			url: logoutURL,
-			headers: {
-				Authorization: `Token ${user.token}`,
-			},
-		});
+			axios({
+				method: 'post',
+				url: logoutURL,
+				headers: {
+					Authorization: `Token ${user.token}`,
+				},
+			});
+		}
 	};
 
 	console.log(user);
@@ -29,21 +37,24 @@ const Header = () => {
 	return (
 		<HeaderWrapper>
 			<HeaderContainer>
-				<br />
 				<HomeLink to='/home'>Home</HomeLink>
-				{!user ? (
-					<NavLink to='/login'>login</NavLink>
-					) : (
-						<NavLink to='/' onClick={logout}>
-						logout
-					</NavLink>
+				<UserContainer>
+				{!user ? null : (
+						<UserInfo>{user.username}</UserInfo>
 				)}
-				{user ? user.email : null}
+				{!user ? (
+					<UserButton to='/login'>Login</UserButton>
+					) : (
+						<UserButton to='/' onClick={logout}>
+						Logout
+					</UserButton>
+				)}
+				</UserContainer>
 			</HeaderContainer>
 			<NavBar>
 				<NavLink to='/'>Landing Page</NavLink>
 				<NavLink to='/dashboard'>Dashboard</NavLink>
-				<NavLink to='/login'>Login</NavLink>
+
 				<NavLink to='/profile'>Profile</NavLink>
 			</NavBar>
 		</HeaderWrapper>

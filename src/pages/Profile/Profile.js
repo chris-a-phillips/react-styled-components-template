@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { UserContext } from '../../utils/UserContext';
 import axios from 'axios';
+import { ProfileWrapper } from './SCProfile';
 
 const Profile = () => {
     const { user, setUser } = useContext(UserContext);
@@ -27,11 +28,11 @@ const Profile = () => {
 	}, []);
 
 	return (
-		<div>
+		<ProfileWrapper>
 			<h1>Profile</h1>
 			{/* quick way to see user without having to console log */}
 			{JSON.stringify(user)}
-		</div>
+		</ProfileWrapper>
 	);
 };
 

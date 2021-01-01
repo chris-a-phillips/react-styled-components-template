@@ -1,10 +1,11 @@
 import React from 'react';
+import { HomeWrapper } from './SCHome';
 
 const Home = () => {
     return (
-        <div>
+        <HomeWrapper>
             <h1>Home</h1>
-        </div>
+        </HomeWrapper>
     );
 };
 

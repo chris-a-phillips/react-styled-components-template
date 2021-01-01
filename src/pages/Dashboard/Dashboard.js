@@ -5,7 +5,10 @@ const Dashboard = () => {
     return (
         <DashboardWrapper>
             <LeftSideBar>Left Sidebar</LeftSideBar>
-            <MainContent>Main Content</MainContent>
+            <MainContent>
+                <h1>Dashboard</h1>
+                Main Content
+            </MainContent>
             <RightSideBar>Right Sidebar</RightSideBar>
         </DashboardWrapper>
     );

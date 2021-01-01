@@ -12,7 +12,7 @@ import { UserContext } from './utils/UserContext';
 import './App.css';
 
 function App() {
-	const [test, setTest] = useState()
+	const [test, setTest] = useState('test')
 	const [user, setUser] = useState(null);
 	const value = useMemo(() => ({user, setUser}), [user,setUser])
 
@@ -33,7 +33,7 @@ function App() {
 							<Route
 								path='/dashboard'
 								exact
-								render={() => <Dashboard test={test} />}
+								render={() => <Dashboard test={test} setTest={setTest} />}
 							/>
 							<Route
 								path='/login'
