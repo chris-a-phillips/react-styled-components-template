@@ -5,9 +5,9 @@ export const login = async () => {
         email: 'square@pants.com',
         token: 'random string',
         userInfo: {
-            beep: '1',
+            beep: 1,
             bop: '2',
-            boop: '3',
+            boop: ['a', 'b', 'c'],
         }
 	};
 };

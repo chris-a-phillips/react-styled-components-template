@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from '../../utils/UserContext'
-// import { login } from '../../utils/UserLogic'
+import { login } from '../../utils/UserLogic'
 import { Redirect } from 'react-router-dom';
 import axios from 'axios'
 import {
@@ -85,13 +85,14 @@ const Login = () => {
 		<div>
 			<h1>Login</h1>
 			{/* for test login logic */}
-			{/* <button
+			<button
 				onClick={async () => {
 					const user = await login();
 					setUser(user);
+					setRedirect(true)
 				}}>
 				Test Login
-			</button> */}
+			</button>
 			<LoginPage>
 				{!newUser ? (
 					<LoginForm onSubmit={handleSubmit}>

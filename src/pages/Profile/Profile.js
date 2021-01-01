@@ -4,11 +4,10 @@ import axios from 'axios';
 
 const Profile = () => {
     const { user, setUser } = useContext(UserContext);
-    console.log(user)
 
 	useEffect(() => {
 		// user condition is for testing purposes
-		if (user) {
+		if (user && (user.username !== 'spongebob')) {
 			const personalURL = 'http://localhost:8000/users/me/';
 			axios({
 				method: 'get',
@@ -30,6 +29,8 @@ const Profile = () => {
 	return (
 		<div>
 			<h1>Profile</h1>
+			{/* quick way to see user without having to console log */}
+			{JSON.stringify(user)}
 		</div>
 	);
 };
