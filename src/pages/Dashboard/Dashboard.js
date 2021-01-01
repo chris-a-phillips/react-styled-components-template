@@ -1,10 +1,13 @@
 import React from 'react';
+import { DashboardWrapper, LeftSideBar, MainContent, RightSideBar } from './SCDashboard';
 
 const Dashboard = () => {
     return (
-        <div>
-            <h1>Dashboard</h1>
-        </div>
+        <DashboardWrapper>
+            <LeftSideBar>Left Sidebar</LeftSideBar>
+            <MainContent>Main Content</MainContent>
+            <RightSideBar>Right Sidebar</RightSideBar>
+        </DashboardWrapper>
     );
 };
 

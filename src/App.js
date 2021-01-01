@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { MainContainer, PageWrapper } from './AppStyles';
 import Landing from './pages/Landing/Landing';
@@ -8,16 +8,18 @@ import Home from './pages/Home/Home';
 import Profile from './pages/Profile/Profile';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import { UserContext } from './components/SharedContext';
+import { UserContext } from './components/UserContext';
 import './App.css';
 
 function App() {
-	const [test, setTest] = useState();
+	const [test, setTest] = useState()
+	const [user, setUser] = useState(null);
+	const value = useMemo(() => ({user, setUser}), [user,setUser])
 
 	return (
 		<PageWrapper>
 			<Router>
-				<UserContext.Provider value={UserContext}>
+				<UserContext.Provider value={value}>
 					<Header />
 					<MainContainer>
 						main

@@ -1,15 +1,14 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../../components/SharedContext'
+import { UserContext } from '../../components/UserContext'
 
 const Login = () => {
-    // const user = useContext(UserContext)
-    const { userInfo, SetUser } = useContext(UserContext);
-    console.log(userInfo)
+    const { user, setUser } = useContext(UserContext)
+
     return (
         <div>
             <h1>Login</h1>
-            {/* {user.name} */}
-
+                <button onClick={() => setUser('hello')}>change</button>
+                {user}
         </div>
     );
 };
