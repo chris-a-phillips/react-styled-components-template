@@ -12,4 +12,6 @@ export const NavBar = styled.nav`
 
 export const NavLink = styled(Link)``
 
-export const HomeLink = styled(Link)``
+export const HomeLink = styled(Link)`
+	
+`
