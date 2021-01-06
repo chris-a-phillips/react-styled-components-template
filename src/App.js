@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Switch, Route } from 'react-router-dom';
 import { MainContainer, PageWrapper } from './AppStyles';
 import Landing from './pages/Landing/Landing';
 import Dashboard from './pages/Dashboard/Dashboard';
@@ -18,7 +18,6 @@ function App() {
 
 	return (
 		<PageWrapper>
-			<Router>
 				<UserContext.Provider value={value}>
 					<Header value={value}/>
 					<MainContainer>
@@ -49,7 +48,6 @@ function App() {
 					</MainContainer>
 					<Footer />
 				</UserContext.Provider>
-			</Router>
 		</PageWrapper>
 	);
 }
