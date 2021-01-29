@@ -52,9 +52,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<!-- 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
--->
+**![](https://lh4.googleusercontent.com/iZ4NzWTHeMLoAz12ePPXexxF2O9oNe8XB-WUg26ea5AzSSigtn97HNQPpVfRRVni-cxMWvHbSqufzXa16ixOIsfPi5BR5xZ2kuIfZoaWbj_dCEthvXblYf6gQbeEeh53O-xKKEiGYxE)**
 
 
 This repository is a template with all of the starter code for a basic React App using Functional Components and React Hooks.
@@ -70,7 +68,7 @@ The main functionalities include:
 	 - User Login Page
 	 - User Profile Page
 
-It is currently set up to connect with a backend that uses Python and Djoser. I am working to ensure that it is fully responsive and data reads well across all devices.  After that I will go back and add comments so that it is easier to see how the components are connected.
+It is currently set up to connect with a backend that uses Python and Djoser. I am working to ensure that it is fully responsive and data reads well across all devices.  After that I will go back and make the styling look better and add comments so that it is easier to see how the components are connected.
 
 ### Built With
 
@@ -103,11 +101,16 @@ Make sure that you have the latest npm version.
    ```
 
 <!-- USAGE EXAMPLES -->
-<!-- ## Usage -->
+## Usage 
 
-<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources. -->
+**![](https://lh3.googleusercontent.com/p3VJ1ptHdz-KFdgQGYpu8_b7ORphsu77QS0pM8qTsUsesI5Y3-jM9qHz0XTnM01Kv5bjEn5K0onRwYP9XKQf58s9M5Vd4nEI_uMAxpbin7rah8cfnsR7EVROItkGWz_i3wTicp8POBw)**
+Dashboard Page
 
-<!-- _For more examples, please refer to the [Documentation](https://github.com/chris-a-phillips/styled-components-template/blob/main/README.md)_ -->
+**![](https://lh4.googleusercontent.com/gVin_7T1gHMOMju1ZZGGdiahoueu_3B-IwwK822tkDXpg5N5qpDfyfIKDogEc--ldGHLJNhiBL3u6YZJ0X_dW99ZD_AdfeHkjnKYjfH4Ko71f1slqhY6F_r4osD_4zR_eLn-KVdJTgw)**
+Profile Page
+
+
+_For more examples, please refer to the [Documentation](https://github.com/chris-a-phillips/styled-components-template/blob/main/README.md)_
 
 
 
