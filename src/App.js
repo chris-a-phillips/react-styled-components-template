@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { BrowserRouter as Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Link, Switch, Route } from 'react-router-dom';
 import { MainContainer, PageWrapper } from './AppStyles';
 import Landing from './pages/Landing/Landing';
 import Dashboard from './pages/Dashboard/Dashboard';
