@@ -1,38 +1,24 @@
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
--->
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="{logo_link}">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/chris-a-phillips/react-styled-components-template">
+   <!-- <img src="images/logo.png" alt="Logo" width="80" height="80"> -->
   </a>
 
-  <h3 align="center">README-Template</h3>
+  <h3 align="center">Styled Components Template</h3>
 
   <p align="center">
-    A basic README template to jumpstart your projects!
+    A basic frontend only React template using Styled Components
     <br />
-    <a href="{link_to_documentation}"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/chris-a-phillips/react-styled-components-template/blob/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="{link_to_demo}">View Demo</a>
+    <a href="https://github.com/chris-a-phillips/react-styled-components-template">View Demo</a>
     ·
-    <a href="{link_to_issues">Report Bug</a>
+    <a href="https://github.com/chris-a-phillips/react-styled-components-template/issues">Report Bug</a>
     ·
-    <a href="{link_to_issues}">Request Feature</a>
+    <a href="https://github.com/chris-a-phillips/react-styled-components-template/issues">Request Feature</a>
   </p>
 </p>
 
@@ -55,12 +41,10 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+   <!-- <li><a href="#usage">Usage</a></li> -->
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -68,21 +52,28 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+<!-- 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
+-->
 
-Information about the application.
 
-Main purpose:
-* Purpose 1
-* Purpose 2
-* Purpose 3
+This repository is a template with all of the starter code for a basic React App using Functional Components and React Hooks.
 
-Summary
+The main functionalities include:
+
+ - Utils folder that with Context hook set up and filler data for test login
+ -  Easily readable and fully semantic Styled Component Layout
+ - Frontend that includes pages for:
+	 - Landing Page
+	 - Home Page
+	 - User Dashboard Page
+	 - User Login Page
+	 - User Profile Page
+
+It is currently set up to connect with a backend that uses Python and Djoser. I am working to ensure that it is fully responsive and data reads well across all devices.  After that I will go back and add comments so that it is easier to see how the components are connected.
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [React](https://reactjs.org/)
 * [Styled Components](https://styled-components.com/)
 
@@ -90,12 +81,11 @@ This section should list any major frameworks that you built your project using.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Make sure that you have the latest npm version.
 * npm
   ```sh
   npm install
@@ -103,41 +93,35 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/chris-a-phillips/react-styled-components-template.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js` or `.env` file
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
 
 <!-- USAGE EXAMPLES -->
-## Usage
+<!-- ## Usage -->
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources. -->
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- _For more examples, please refer to the [Documentation](https://github.com/chris-a-phillips/styled-components-template/blob/main/README.md)_ -->
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https:{link_to_issues}) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/chris-a-phillips/react-styled-components-template/issues) for a list of proposed features (and known issues).
 
 
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Explanation of about how to contribute and appreciations for future contributions. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -146,49 +130,9 @@ Explanation of about how to contribute and appreciations for future contribution
 5. Open a Pull Request
 
 
-
-<!-- LICENSE -->
-## License
-
-Any licenses will go here. See `LICENSE` for more information.
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter](https://twitter.com/your_username) - email@example.com
+Chris Phillips - [Chris Phillips LinkedIn](https://www.linkedin.com/in/chris-a-phillips/) - phillipsachris@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Othneil Drew](https://github.com/othneildrew/)
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-<!-- 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
--->
-[linkedin-url]: https://www.linkedin.com/in/chris-a-phillips/
-[product-screenshot]: images/screenshot.png
+Project Link: [https://github.com/chris-a-phillips/react-styled-components-template](https://github.com/chris-a-phillips/react-styled-components-template)
